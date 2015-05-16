@@ -1,0 +1,18 @@
+/*Corps du site*/
+body
+{
+	padding-left: 11em;
+	font-family: arial;
+	color:black;
+	background-color:#EEE8AA;
+}
+/* Couleur des liens*/
+ul.barnav a {text-decoration: none}
+	a:link {color:blue}
+	a:visited {color:black}
+label
+{
+	display: block;
+	width: 150px;
+	float: left;
+}

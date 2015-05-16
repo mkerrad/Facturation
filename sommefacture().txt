@@ -1,0 +1,13 @@
+DELIMITER @
+CREATE PROCEDURE sommefacture()
+LANGUAGE SQL
+DETERMINISTIC
+BEGIN
+UPDATE Facture
+SET somme = (SELECT SUM(pu * quantite)
+	     FROM PRESTATION,LIGNE_FACTURE
+             WHERE PRESTATION.code_prestation = LIGNE_FACTURE.code_prestation
+	     AND LIGNE_FACTURE.num_facture = FACTURE.num_facture);
+END;
+@
+DELIMITER ;
